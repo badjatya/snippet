@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 type Props = {};
 
@@ -9,7 +10,7 @@ const Hero = (props: Props) => {
 			<section className='mb-8 flex flex-col justify-between gap-6 sm:gap-10 md:mb-16 md:gap-16 lg:flex-row'>
 				{/* <!-- content - start --> */}
 				<div className='flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12'>
-					<p className='mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl'>
+					<p className='mb-4 font-semibold text-primary md:mb-6 md:text-lg xl:text-xl'>
 						Organize and Collaborate
 					</p>
 
@@ -18,11 +19,11 @@ const Hero = (props: Props) => {
 					</h1>
 
 					<div className='flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start'>
-						<Link
-							href='/'
-							className='inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base'>
-							Join Now and Boost Your Coding Efficiency
-						</Link>
+						<Button asChild>
+							<Link href='/'>
+								Join Now and Boost Your Coding Efficiency
+							</Link>
+						</Button>
 					</div>
 				</div>
 				{/* <!-- content - end --> */}
@@ -42,7 +43,7 @@ const Hero = (props: Props) => {
 				{/* <!-- stats - start --> */}
 				<div className='-mx-6 grid grid-cols-2 gap-4 md:-mx-8 md:flex md:divide-x'>
 					<div className='px-6 md:px-8'>
-						<span className='block text-center text-lg font-bold text-indigo-500 md:text-left md:text-xl'>
+						<span className='block text-center text-lg font-bold text-primary md:text-left md:text-xl'>
 							55+
 						</span>
 						<span className='block text-center text-sm font-semibold text-gray-800 md:text-left md:text-base'>
@@ -51,7 +52,7 @@ const Hero = (props: Props) => {
 					</div>
 
 					<div className='px-6 md:px-8'>
-						<span className='block text-center text-lg font-bold text-indigo-500 md:text-left md:text-xl'>
+						<span className='block text-center text-lg font-bold text-primary md:text-left md:text-xl'>
 							10+
 						</span>
 						<span className='block text-center text-sm font-semibold text-gray-800 md:text-left md:text-base'>
@@ -60,7 +61,7 @@ const Hero = (props: Props) => {
 					</div>
 
 					<div className='px-6 md:px-8'>
-						<span className='block text-center text-lg font-bold text-indigo-500 md:text-left md:text-xl'>
+						<span className='block text-center text-lg font-bold text-primary md:text-left md:text-xl'>
 							15+
 						</span>
 						<span className='block text-center text-sm font-semibold text-gray-800 md:text-left md:text-base'>
@@ -81,7 +82,7 @@ const Hero = (props: Props) => {
 						<a
 							href='#'
 							target='_blank'
-							className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'>
+							className='text-gray-400 transition duration-100 hover:text-primary '>
 							<svg
 								className='h-5 w-5'
 								width='24'
@@ -96,7 +97,7 @@ const Hero = (props: Props) => {
 						<a
 							href='#'
 							target='_blank'
-							className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'>
+							className='text-gray-400 transition duration-100 hover:text-primary '>
 							<svg
 								className='h-5 w-5'
 								width='24'
@@ -111,7 +112,7 @@ const Hero = (props: Props) => {
 						<a
 							href='#'
 							target='_blank'
-							className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'>
+							className='text-gray-400 transition duration-100 hover:text-primary '>
 							<svg
 								className='h-5 w-5'
 								width='24'
