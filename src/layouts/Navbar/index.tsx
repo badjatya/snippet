@@ -1,10 +1,14 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useUser } from "@clerk/nextjs";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+	const { user, isSignedIn } = useUser();
+	console.log("User: ", user);
 	return (
 		<header className='mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16'>
 			<Link
@@ -20,7 +24,6 @@ const Navbar = (props: Props) => {
 				/>
 			</Link>
 
-			{/* <!-- nav - start --> */}
 			<nav className='hidden gap-12 lg:flex'>
 				<Link
 					href='/about'
@@ -33,13 +36,16 @@ const Navbar = (props: Props) => {
 					Contact
 				</Link>
 			</nav>
-			{/* <!-- nav - end --> */}
 
-			{/* <!-- buttons - start --> */}
-			<Button asChild>
-				<Link href='/sign-up'>Signup</Link>
-			</Button>
-			{/* <!-- buttons - end --> */}
+			{isSignedIn ? (
+				<Button asChild>
+					<Link href='/dashboard'>Dashboard</Link>
+				</Button>
+			) : (
+				<Button asChild>
+					<Link href='/sign-up'>Signup</Link>
+				</Button>
+			)}
 		</header>
 	);
 };

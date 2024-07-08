@@ -1,10 +1,13 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useUser } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 
 type Props = {};
 
 const Hero = (props: Props) => {
+	const { isSignedIn } = useUser();
 	return (
 		<div>
 			<section className='mb-8 flex flex-col justify-between gap-6 sm:gap-10 md:mb-16 md:gap-16 lg:flex-row'>
@@ -19,11 +22,17 @@ const Hero = (props: Props) => {
 					</h1>
 
 					<div className='flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start'>
-						<Button asChild>
-							<Link href='/'>
-								Join Now and Boost Your Coding Efficiency
-							</Link>
-						</Button>
+						{isSignedIn ? (
+							<Button asChild>
+								<Link href='/'>Go to Dashboard</Link>
+							</Button>
+						) : (
+							<Button asChild>
+								<Link href='/'>
+									Join Now and Boost Your Coding Efficiency
+								</Link>
+							</Button>
+						)}
 					</div>
 				</div>
 				{/* <!-- content - end --> */}
