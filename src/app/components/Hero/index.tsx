@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
 				{/* <!-- content - end --> */}
 
 				{/* <!-- image - start --> */}
-				<div className='relative h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-[380px] lg:w-[650px]'>
+				<div className='relative h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-[380px] lg:w-[650px]'>
 					<Image
 						src='/home/hero/main.png'
 						fill
