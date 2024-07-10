@@ -3,12 +3,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
 	const { user, isSignedIn } = useUser();
-	console.log("User: ", user);
+	const path = usePathname();
+	const isDashboard = path.includes("/dashboard");
+	if (isDashboard) return null;
 	return (
 		<div className='bg-white'>
 			<div className='mx-auto max-w-screen-2xl px-4 md:px-8'>
