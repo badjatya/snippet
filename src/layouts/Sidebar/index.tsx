@@ -6,7 +6,7 @@ import { Home, User, Settings, Calendar, PhoneCall } from "lucide-react";
 
 const SidebarData = [
 	{
-		name: "Base",
+		name: "Quick Links",
 		items: [
 			{
 				name: "Home",
