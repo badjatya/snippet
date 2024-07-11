@@ -24,11 +24,11 @@ const Hero = (props: Props) => {
 					<div className='flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start'>
 						{isSignedIn ? (
 							<Button asChild>
-								<Link href='/'>Go to Dashboard</Link>
+								<Link href='/dashboard'>Go to Dashboard</Link>
 							</Button>
 						) : (
 							<Button asChild>
-								<Link href='/'>
+								<Link href='/sign-up'>
 									Join Now and Boost Your Coding Efficiency
 								</Link>
 							</Button>
