@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }: Props) {
 		<section className='flex'>
 			<Sidebar />
 
-			<div className='flex-grow'>{children}</div>
+			<div className='flex-grow p-4'>{children}</div>
 		</section>
 	);
 }
