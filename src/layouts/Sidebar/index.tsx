@@ -3,6 +3,7 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Home, User, Settings, Calendar, PhoneCall } from "lucide-react";
+import { SignOutButton } from "@clerk/nextjs";
 
 const SidebarData = [
 	{
@@ -86,10 +87,12 @@ const Sidebar = () => {
 				</div>
 				{/* Logout Button */}
 				<div className='hidden lg:block absolute bottom-0 w-[79%] h-16'>
-					<button className='flex w-full items-center space-x-2 p-2 rounded-md hover:bg-blue-200 transition-colors ease-in duration-100'>
-						<LogOut className='w-5 h-5' />
-						<span>Logout</span>
-					</button>
+					<SignOutButton>
+						<div className='cursor-pointer flex w-full items-center space-x-2 p-2 rounded-md hover:bg-blue-200 transition-colors ease-in duration-100'>
+							<LogOut className='w-5 h-5' />
+							<span>Logout</span>
+						</div>
+					</SignOutButton>
 				</div>
 			</div>
 		</div>
