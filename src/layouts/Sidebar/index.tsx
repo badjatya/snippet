@@ -2,7 +2,7 @@
 import { LogOut } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { Home, User, Settings, Calendar, PhoneCall } from "lucide-react";
+import { Star, Tags, Braces, Languages } from "lucide-react";
 import { SignOutButton } from "@clerk/nextjs";
 
 const SidebarData = [
@@ -10,34 +10,24 @@ const SidebarData = [
 		name: "Quick Links",
 		items: [
 			{
-				name: "Home",
-				icon: Home,
-				path: "/dashboard/mentee",
+				name: "Snippets",
+				icon: Braces,
+				path: "/dashboard/snippets",
 			},
 			{
-				name: "Profile",
-				icon: User,
-				path: "/dashboard/mentee/profile",
+				name: "Tags",
+				icon: Tags,
+				path: "/dashboard/tags",
 			},
 			{
-				name: "Settings",
-				icon: Settings,
-				path: "/dashboard/mentee/settings",
-			},
-		],
-	},
-	{
-		name: "Meetings",
-		items: [
-			{
-				name: "Calendar",
-				icon: Calendar,
-				path: "/dashboard/mentee/calendar",
+				name: "Favorites",
+				icon: Star,
+				path: "/dashboard/favorites",
 			},
 			{
-				name: "Bookings",
-				icon: PhoneCall,
-				path: "/dashboard/mentee/bookings",
+				name: "Languages",
+				icon: Languages,
+				path: "/dashboard/languages",
 			},
 		],
 	},
