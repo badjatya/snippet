@@ -1,5 +1,5 @@
 {
-  "id": "09bec33c-0d20-4351-a3e6-2a59154e3c59",
+  "id": "768c29f5-1f16-47c6-9c2d-c5f51ae9f923",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -12,6 +12,12 @@
           "name": "id",
           "type": "serial",
           "primaryKey": true,
+          "notNull": true
+        },
+        "clerk_id": {
+          "name": "clerk_id",
+          "type": "varchar(150)",
+          "primaryKey": false,
           "notNull": true
         },
         "name": {
@@ -63,7 +69,16 @@
       }
     }
   },
-  "enums": {},
+  "enums": {
+    "public.role": {
+      "name": "role",
+      "schema": "public",
+      "values": [
+        "admin",
+        "user"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "_meta": {
