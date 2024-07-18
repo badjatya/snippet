@@ -13,5 +13,5 @@ export const createUser = async ({ name, email, clerkId }: NewUser) => {
 			email,
 			clerkId,
 		})
-		.returning({ insertedId: User.id });
+		.execute();
 };
